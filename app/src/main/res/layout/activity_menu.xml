@@ -32,7 +32,8 @@
         android:id="@+id/map"
         android:title="@string/map"
         android:drawableLeft="@drawable/map"
-        android:text="@string/map"/>
+        android:text="@string/map"
+        android:onClick="map_btn_clicked"/>
 
     <Button
         style="@style/ButtonText"

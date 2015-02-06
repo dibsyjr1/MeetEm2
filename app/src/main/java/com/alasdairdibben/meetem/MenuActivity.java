@@ -22,14 +22,10 @@ public class MenuActivity extends ActionBarActivity {
          super.onResume();
      }
 
-     Button button = (Button) findViewById(R.id.map);
-     button.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
+     public void map_btn_clicked(View v){
              Intent i = new Intent(MenuActivity.this, MapsActivity.class);
              startActivity(i);
-         }
-     });
+     }
 
 
 }
