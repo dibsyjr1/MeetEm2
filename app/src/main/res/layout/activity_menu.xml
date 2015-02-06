@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="10"
+    android:background="#f3ae1b"
+    tools:context=".MenuActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:gravity="center|bottom"
+        android:layout_weight="8"
+        android:weightSum="10">
+
+    <TextView
+        style="@style/ButtonText"
+        android:id="@+id/meetem"
+        android:title="@string/meetem"
+        android:text="@string/meetem"
+        android:background="#f3ae1b"
+        android:textSize="40sp"/>
+
+
+    <Button
+        style="@style/ButtonText"
+        android:background="@drawable/buttonstyle"
+        android:id="@+id/map"
+        android:title="@string/map"
+        android:drawableLeft="@drawable/map"
+        android:text="@string/map"/>
+
+    <Button
+        style="@style/ButtonText"
+        android:background="@drawable/buttonstyle"
+        android:id="@+id/friends"
+        android:title="@string/friends"
+        android:drawableLeft="@drawable/friends"
+        android:text="@string/friends"/>
+
+    <Button
+        style="@style/ButtonText"
+        android:background="@drawable/buttonstyle"
+        android:id="@+id/groups"
+        android:drawableLeft="@drawable/groups"
+        android:title="@string/groups"
+        android:text="@string/groups"/>
+
+    <Button
+        style="@style/ButtonText"
+        android:background="@drawable/buttonstyle"
+        android:id="@+id/options"
+        android:drawableLeft="@drawable/options"
+        android:title="@string/options"
+        android:text="@string/options"/>
+
+    </LinearLayout>
+
+</LinearLayout>

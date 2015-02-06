@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MeetEm</string>
+    <string name="title_activity_maps">MeetEm</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="map">Map</string>
+    <string name="friends">Friends</string>
+    <string name="groups">Groups</string>
+    <string name="options">Options</string>
+    <string name="meetem">Meetem</string>
+    <string name="title_activity_friends_db">FriendsDB</string>
+
+</resources>
