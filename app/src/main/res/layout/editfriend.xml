@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20px"
+    android:orientation="vertical"
+    android:background="@drawable/main_header_selector">
+
+    <!-- First Name Label -->
+    <ImageView android:layout_width="450px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38px"
+        android:background="@drawable/firstname"
+        android:textSize="17dip"/>
+
+    <!-- Text First Name -->
+    <TextView android:id="@+id/Input_First_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="80px"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+    <!-- Surname Label -->
+    <ImageView android:layout_width="450px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/surname"
+        android:textSize="17dip"/>
+
+    <!-- Text Surname -->
+    <EditText android:id="@+id/Input_Surname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+    <!-- Home Town Label -->
+    <ImageView android:layout_width="450px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hometown"
+        android:layout_marginLeft="13px"
+        android:textSize="17dip"/>
+
+    <!-- Text Home Town -->
+    <EditText android:id="@+id/Input_Home_Town"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <!-- Button Delete Friend -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:background="@drawable/deletebutton"
+            android:layout_width="150px"
+            android:layout_marginLeft="140px"
+            android:layout_marginRight="140px"
+            android:text="Delete"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

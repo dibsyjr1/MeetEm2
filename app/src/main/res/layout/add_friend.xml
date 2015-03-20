@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="10"
+    android:background="@drawable/main_header_selector">
+
+    <!-- Username Label -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:layout_weight="8"
+        android:weightSum="10"
+        android:paddingTop="140px">
+
+    <ImageView
+        android:background="@drawable/username"
+        android:text="Username"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:textSize="17dip"
+        android:layout_width="350px"
+        android:layout_height="100px"
+        android:paddingBottom="20px"
+        android:layout_gravity="left"/>
+
+    <!-- Input Group Name -->
+    <EditText
+        android:id="@+id/Input_Username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+
+    <!-- Button Create Product -->
+    <ImageButton
+        style="@style/ButtonText"
+        android:id="@+id/btnAddFriend"
+        android:background="@drawable/addfriendbutton"
+        android:layout_width="fill_parent"
+        android:text="Add Friend"
+        android:layout_height="30px"/>
+
+    </LinearLayout>
+
+</LinearLayout>

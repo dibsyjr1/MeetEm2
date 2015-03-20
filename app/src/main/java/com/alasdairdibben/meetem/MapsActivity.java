@@ -5,9 +5,15 @@ import android.location.LocationManager;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.CameraUpdate;
@@ -16,25 +22,39 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.location.FusedLocationProviderApi;
 
-public class MapsActivity extends FragmentActivity {
+public class MapsActivity extends FragmentActivity implements
+       GooglePlayServicesClient.ConnectionCallbacks,
+       GooglePlayServicesClient.OnConnectionFailedListener{
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private LocationManager locationManager;
     private static final long MIN_TIME = 400;
     private static final float MIN_DISTANCE = 1000;
+    private MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
+
+        mapView = (MapView) this.findViewById(R.id.map);
+        mapView.onCreate(savedInstanceState);
+        mMap = mapView.getMap();
+        mMap.setMyLocationEnabled(true);
+
+        MapsInitializer.initialize(this);
     }
 
     @Override
     protected void onResume() {
+        mapView.onResume();
         super.onResume();
         setUpMapIfNeeded();
+
+
     }
+
 
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
@@ -62,7 +82,6 @@ public class MapsActivity extends FragmentActivity {
                 setUpMap();
             }
         }
-        mMap.setMyLocationEnabled(true);
 
     }
 
@@ -77,6 +96,18 @@ public class MapsActivity extends FragmentActivity {
     }
 
 
+    @Override
+    public void onConnected(Bundle bundle) {
+    }
 
+    @Override
+    public void onDisconnected() {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
 }
 

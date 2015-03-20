@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20px"
+    android:orientation="vertical"
+    android:background="@drawable/main_header_selector">
+
+    <!-- Group Name Label -->
+    <ImageView android:layout_width="420px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/groupname"
+        android:paddingLeft="30px"
+        android:paddingRight="10dip"
+        android:paddingTop="30px"
+        android:textSize="17dip"/>
+
+    <!-- Input Group Name -->
+    <EditText android:id="@+id/Input_Group_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+    <!-- Description Label -->
+    <ImageView android:layout_width="420px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13px"
+        android:background="@drawable/description"/>
+
+    <!-- Input Description -->
+    <EditText android:id="@+id/Input_Description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"/>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Button Save Group -->
+        <ImageButton android:id="@+id/btnSave"
+            style="@style/ButtonText"
+            android:background="@drawable/savebutton"
+            android:layout_width="fill_parent"
+            android:text="Save"
+            android:layout_height="80px"
+            android:layout_weight="1"/>
+
+        <!-- Button Delete Group -->
+        <ImageButton android:id="@+id/btnDelete"
+            style="@style/ButtonText"
+            android:background="@drawable/deletebutton"
+            android:layout_width="fill_parent"
+            android:text="Delete"
+            android:layout_height="80px"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>
+

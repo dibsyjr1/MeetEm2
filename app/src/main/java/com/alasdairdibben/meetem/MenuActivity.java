@@ -2,6 +2,10 @@ package com.alasdairdibben.meetem;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,9 +17,10 @@ import android.view.MenuItem;
  */
 public class MenuActivity extends ActionBarActivity {
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        this.setContentView(R.layout.activity_menu);
     }
 
      protected void onResume() {
@@ -23,8 +28,18 @@ public class MenuActivity extends ActionBarActivity {
      }
 
      public void map_btn_clicked(View v){
-             Intent i = new Intent(MenuActivity.this, MapsActivity.class);
-             startActivity(i);
+         Intent i = new Intent(MenuActivity.this, MapsActivity.class);
+         startActivity(i);
+     }
+
+     public void friend_btn_clicked(View v){
+         Intent i = new Intent(MenuActivity.this, FriendsActivity.class);
+         startActivity(i);
+     }
+
+     public void group_btn_clicked(View v){
+         Intent i = new Intent(MenuActivity.this, GroupsActivity.class);
+         startActivity(i);
      }
 
 

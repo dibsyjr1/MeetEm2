@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_header_selector">
+
+    <EditText
+        android:id="@+id/Input_Username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Desired Username"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Input_Password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Desired Password"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Input_First_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your First Name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Input_Surname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Surname"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Input_Home_Town"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Home Town"
+        android:inputType="text"/>
+
+    <CheckedTextView
+        android:id="@+id/Input_Bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bar"
+        android:hint="Would You Prefer to Meet at a Bar?"/>
+
+    <CheckedTextView
+        android:id="@+id/Input_Cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cafe"
+        android:hint="Would You Prefer to Meet at a Bar?"/>
+    
+    <CheckedTextView
+        android:id="@+id/Input_Shopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping"
+        android:hint="Would You Prefer to Meet at a Bar?"/>
+    
+    <CheckedTextView
+        android:id="@+id/Input_Restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant"
+        android:hint="Would You Prefer to Meet at a Bar?"/>
+    
+    <CheckedTextView
+        android:id="@+id/Input_Entertainment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entertainment"
+        android:hint="Would You Prefer to Meet at a Bar?"/>
+    
+    <Spinner
+        android:id="@+id/Input_Price"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="What Price do you Look for When Going Somewhere? (On a Scale of 1-5)"
+        android:text="Price">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        </Spinner>
+
+    <Spinner
+        android:id="@+id/Input_Rating"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="What Rating do you Look for When Going Somewhere? (On a Scale of 1-5)"
+        android:text="Rating">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </Spinner>
+
+    <Button
+        android:id="@+id/btnCreateUser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Create"/>
+
+</LinearLayout>

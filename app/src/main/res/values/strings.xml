@@ -11,5 +11,7 @@
     <string name="options">Options</string>
     <string name="meetem">Meetem</string>
     <string name="title_activity_friends_db">FriendsDB</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 
 </resources>

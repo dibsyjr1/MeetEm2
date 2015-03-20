@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:gravity="center"
     android:weightSum="10"
-    android:background="#f3ae1b"
+    android:background="@drawable/main_header_selector"
     tools:context=".MenuActivity">
 
 
@@ -13,51 +13,53 @@
         android:orientation="vertical"
         android:layout_width="0dip"
         android:layout_height="fill_parent"
-        android:gravity="center|bottom"
+        android:gravity="center"
         android:layout_weight="8"
         android:weightSum="10">
 
-    <TextView
-        style="@style/ButtonText"
+    <ImageView
         android:id="@+id/meetem"
         android:title="@string/meetem"
-        android:text="@string/meetem"
-        android:background="#f3ae1b"
-        android:textSize="40sp"/>
+        android:background="@drawable/meetem"
+        android:layout_width="400px"
+        android:layout_height="150px"
+        android:layout_margin="20px"/>
 
 
-    <Button
-        style="@style/ButtonText"
-        android:background="@drawable/buttonstyle"
+    <ImageButton
+        android:background="@drawable/mapbutton"
         android:id="@+id/map"
         android:title="@string/map"
-        android:drawableLeft="@drawable/map"
         android:text="@string/map"
+        android:layout_height="80px"
+        android:layout_width="350px"
         android:onClick="map_btn_clicked"/>
 
-    <Button
-        style="@style/ButtonText"
-        android:background="@drawable/buttonstyle"
+    <ImageButton
+        android:background="@drawable/friendsbutton"
         android:id="@+id/friends"
         android:title="@string/friends"
-        android:drawableLeft="@drawable/friends"
-        android:text="@string/friends"/>
+        android:text="@string/friends"
+        android:layout_height="80px"
+        android:layout_width="350px"
+        android:layout_margin="20px"
+        android:onClick="friend_btn_clicked"/>
 
-    <Button
-        style="@style/ButtonText"
-        android:background="@drawable/buttonstyle"
+    <ImageButton
+        android:background="@drawable/groupsbutton"
         android:id="@+id/groups"
-        android:drawableLeft="@drawable/groups"
         android:title="@string/groups"
-        android:text="@string/groups"/>
+        android:layout_height="80px"
+        android:layout_width="350px"
+        android:onClick="group_btn_clicked"/>
 
-    <Button
-        style="@style/ButtonText"
-        android:background="@drawable/buttonstyle"
+    <ImageButton
+        android:background="@drawable/optionsbutton"
         android:id="@+id/options"
-        android:drawableLeft="@drawable/options"
-        android:title="@string/options"
-        android:text="@string/options"/>
+        android:layout_height="80px"
+        android:layout_width="350px"
+        android:layout_margin="20px"
+        android:title="Options"/>
 
     </LinearLayout>
 
