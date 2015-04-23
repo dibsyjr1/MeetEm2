@@ -9,45 +9,57 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/signup"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"/>
+
     <ImageView
         android:background="@drawable/firstname"
         android:id="@+id/firstname"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="130dp"
+        android:layout_marginLeft="20dp"
         android:layout_gravity="left"/>
 
-    <EditText android:id="@+id/Input_Firstname"
+    <EditText android:id="@+id/Input_First_Name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
     <ImageView
         android:background="@drawable/surname"
         android:id="@+id/surname"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="120dp"
+        android:layout_marginLeft="11dp"
         android:layout_gravity="left"/>
 
     <EditText android:id="@+id/Input_Surname"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
     <ImageView
         android:background="@drawable/hometown"
         android:id="@+id/hometown"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="150dp"
+        android:layout_marginLeft="12dp"
         android:layout_gravity="left"/>
 
-    <EditText android:id="@+id/Input_HomeTown"
+    <EditText android:id="@+id/Input_Home_Town"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
@@ -57,347 +69,394 @@
         android:id="@+id/username"
         android:title="@string/username"
         android:text="@string/username"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="130dp"
+        android:layout_marginLeft="13dp"
         android:layout_gravity="left"/>
 
     <EditText android:id="@+id/Input_Username"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
     <ImageView
         android:background="@drawable/password"
         android:id="@+id/password"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="130dp"
+        android:layout_marginLeft="14dp"
         android:layout_gravity="left"/>
 
     <EditText android:id="@+id/Input_Password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
     <ImageView
         android:background="@drawable/confirm"
         android:id="@+id/confirm"
-        android:layout_height="100px"
-        android:layout_width="400px"
+        android:layout_height="30dp"
+        android:layout_width="130dp"
+        android:layout_marginLeft="10dp"
         android:layout_gravity="left"/>
 
     <EditText android:id="@+id/Input_Confirm"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
+        android:layout_marginLeft="27dp"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
         <ImageView
+            android:background="@drawable/preferences"
+            android:id="@+id/preferences"
+            android:layout_height="30dp"
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left"/>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/amusementpark"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:background="@drawable/amusementpark"
+                android:layout_marginLeft="27dp"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/amusementcheck"
+                android:layout_marginLeft="70dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:background="@drawable/artgallery"
+                android:layout_marginLeft="27dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/artcheck"
+                android:layout_marginLeft="145dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/artgallery"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/bar"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barcheck"
+                android:layout_marginLeft="165dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="200px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/bookstore"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookscheck"
+                android:layout_marginLeft="140dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bar"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/bowling"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bowlingcheck"
+                android:layout_marginLeft="170dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/cafe"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cafecheck"
+                android:layout_marginLeft="170dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bookstore"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/cinema"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cinemacheck"
+                android:layout_marginLeft="170dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/clothingstore"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clothingcheck"
+                android:layout_marginLeft="120dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bowling"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/departmentstore"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/departmentcheck"
+                android:layout_marginLeft="70dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/electronicsstore"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/electronicscheck"
+                android:layout_marginLeft="70dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cafe"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="23dp"
+                android:background="@drawable/jewellerystore"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/jewellerycheck"
+                android:layout_marginLeft="74dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/museum"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/museumcheck"
+                android:layout_marginLeft="170dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cinema"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/nightclub"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clubcheck"
+                android:layout_marginLeft="150dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/park"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/parkcheck"
+                android:layout_marginLeft="170dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/clothingstore"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="28dp"
+                android:background="@drawable/restaurant"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/restaurantcheck"
+                android:layout_marginLeft="149dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="125px"/>
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/shoestore"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shoescheck"
+                android:layout_marginLeft="150dp"/>
 
-        <ImageView
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/departmentstore"/>
+            android:layout_height="wrap_content">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"/>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="23dp"
+                android:background="@drawable/shoppingmall"/>
 
-    </LinearLayout>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mallcheck"
+                android:layout_marginLeft="99dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/electronicsstore"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/jewellerystore"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/museum"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/nightclub"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="200px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/park"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="275px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/restaurant"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="200px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shoestore"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="200px"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shoppingmall"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:layout_marginLeft="75px"/>
-
-    </LinearLayout>
+        </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="26dp"
         android:background="@drawable/price"/>
 
     <Spinner
+        android:id="@+id/Input_Price"
         android:layout_width="fill_parent"
         android:layout_height="180px"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="26dp"
         android:background="@drawable/rating"/>
 
     <Spinner
         android:layout_width="fill_parent"
-        android:layout_height="180px"/>
+        android:layout_height="180px"
+        android:id="@+id/Input_Rating"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signupbutton"
+            android:background="@drawable/signupbutton"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
 
     </LinearLayout>
 

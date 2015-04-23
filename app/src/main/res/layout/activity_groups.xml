@@ -5,10 +5,26 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_header_selector">
 
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:background="@drawable/groups"
+        android:layout_gravity="center"/>
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"/>
+
+    <ImageButton
+        android:id="@+id/btnCreateGroup"
+        android:background="@drawable/creategroup"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:onClick="create_group_btn_clicked"/>
 
 </LinearLayout>

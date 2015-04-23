@@ -13,5 +13,20 @@
     <string name="title_activity_friends_db">FriendsDB</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string-array name="price_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="rating_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 
 </resources>

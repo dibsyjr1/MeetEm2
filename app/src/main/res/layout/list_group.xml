@@ -4,16 +4,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <!-- User id (pid) - will be HIDDEN - used to pass to other activity -->
+    <!-- Group id (gid) - will be HIDDEN - used to pass to other activity -->
     <TextView
-        android:id="@+id/gid"
+        android:id="@+id/Group_ID"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
     <!-- Name Label -->
     <TextView
-        android:id="@+id/group_name"
+        android:id="@+id/Group_Name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="6dip"
@@ -22,7 +22,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/Description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="6dip"

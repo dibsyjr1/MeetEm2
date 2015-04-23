@@ -5,23 +5,25 @@
     android:orientation="vertical"
     android:background="@drawable/main_header_selector">
 
-    <ImageButton
-        android:layout_width="200px"
-        android:layout_height="80px"
-        android:background="@drawable/back"/>
+    <ImageView
+        android:layout_width="145dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:background="@drawable/map"/>
 
-    <fragment android:name="com.google.android.gms.maps.SupportMapFragment"
+    <fragment android:name="com.google.android.gms.maps.MapFragment"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         android:id="@+id/map"
-        android:layout_width="780px"
-        android:layout_height="950px"
+        android:layout_width="fill_parent"
+        android:layout_height="475dp"
         android:layout_gravity="center_vertical"/>
 
 
 
-    <Button
+    <ImageButton
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Generate Meeting Point"/>
+        android:layout_height="35dp"
+        android:background="@drawable/gmp"
+        android:onClick="gmpClicked"/>
 
 </LinearLayout>

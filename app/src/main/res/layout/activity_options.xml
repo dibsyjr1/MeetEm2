@@ -7,37 +7,61 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-10px"
         android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:background="@drawable/options"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
 
         <ImageView
             android:background="@drawable/username"
             android:id="@+id/username"
             android:title="@string/username"
             android:text="@string/username"
-            android:layout_height="100px"
-            android:layout_width="400px"
+            android:layout_height="30dp"
+            android:layout_width="130dp"
+            android:layout_marginLeft="13dp"
             android:layout_gravity="left"/>
 
         <EditText android:id="@+id/Input_Username"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dip"
+            android:layout_marginLeft="27dp"
             android:layout_marginBottom="15dip"
             android:singleLine="true"/>
 
+        <ImageView
+            android:background="@drawable/preferences"
+            android:id="@+id/preferences"
+            android:layout_height="30dp"
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="left"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/amusementpark"/>
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:background="@drawable/amusementpark"
+                android:layout_marginLeft="27dp"/>
 
             <CheckBox
+                android:id="@+id/Input_Amusement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"/>
+                android:layout_marginLeft="70dp"/>
 
         </LinearLayout>
 
@@ -46,15 +70,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/artgallery"/>
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:background="@drawable/artgallery"
+                android:layout_marginLeft="27dp"/>
 
             <CheckBox
+                android:id="@+id/Input_Art"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="200px"/>
+                android:layout_marginLeft="145dp"/>
 
         </LinearLayout>
 
@@ -63,15 +88,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="105dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/bar"/>
 
             <CheckBox
+                android:id="@+id/Input_Bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="165dp"/>
 
         </LinearLayout>
 
@@ -80,14 +106,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="130dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/bookstore"/>
 
             <CheckBox
+                android:id="@+id/Input_Books"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="140dp"/>
 
         </LinearLayout>
 
@@ -96,15 +124,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/bowling"/>
 
             <CheckBox
+                android:id="@+id/Input_Bowling"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="170dp"/>
 
         </LinearLayout>
 
@@ -113,15 +142,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/cafe"/>
 
             <CheckBox
+                android:id="@+id/Input_Cafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="170dp"/>
 
         </LinearLayout>
 
@@ -130,15 +160,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/cinema"/>
 
             <CheckBox
+                android:id="@+id/Input_Cinema"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="170dp"/>
 
         </LinearLayout>
 
@@ -147,15 +178,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/clothingstore"/>
 
             <CheckBox
+                android:id="@+id/Input_Clothing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="125px"/>
+                android:layout_marginLeft="120dp"/>
 
         </LinearLayout>
 
@@ -164,14 +196,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/departmentstore"/>
 
             <CheckBox
+                android:id="@+id/Input_Department"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"/>
+                android:layout_marginLeft="70dp"/>
 
         </LinearLayout>
 
@@ -180,14 +214,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/electronicsstore"/>
 
             <CheckBox
+                android:id="@+id/Input_Electronics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"/>
+                android:layout_marginLeft="70dp"/>
 
         </LinearLayout>
 
@@ -196,14 +232,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="23dp"
                 android:background="@drawable/jewellerystore"/>
 
             <CheckBox
+                android:id="@+id/Input_Jewellery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"/>
+                android:layout_marginLeft="74dp"/>
 
         </LinearLayout>
 
@@ -212,15 +250,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/museum"/>
 
             <CheckBox
+                android:id="@+id/Input_Museum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="170dp"/>
 
         </LinearLayout>
 
@@ -229,15 +268,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/nightclub"/>
 
             <CheckBox
+                android:id="@+id/Input_Club"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="200px"/>
+                android:layout_marginLeft="150dp"/>
 
         </LinearLayout>
 
@@ -246,15 +286,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/park"/>
 
             <CheckBox
+                android:id="@+id/Input_Park"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="275px"/>
+                android:layout_marginLeft="170dp"/>
 
         </LinearLayout>
 
@@ -263,15 +304,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="28dp"
                 android:background="@drawable/restaurant"/>
 
             <CheckBox
+                android:id="@+id/Input_Restaurant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="200px"/>
+                android:layout_marginLeft="149dp"/>
 
         </LinearLayout>
 
@@ -280,15 +322,16 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="27dp"
                 android:background="@drawable/shoestore"/>
 
             <CheckBox
+                android:id="@+id/Input_Shoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="200px"/>
+                android:layout_marginLeft="150dp"/>
 
         </LinearLayout>
 
@@ -297,16 +340,66 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="175dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="23dp"
                 android:background="@drawable/shoppingmall"/>
 
             <CheckBox
+                android:id="@+id/Input_Mall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10px"
-                android:layout_marginLeft="75px"/>
+                android:layout_marginLeft="99dp"/>
 
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/price"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="180px"
+            android:id="@+id/Input_Price"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/rating"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="180px"
+            android:id="@+id/Input_Rating"/>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_vertical">
+            <!-- Button Save Group -->
+            <ImageButton android:id="@+id/btnSave"
+                android:background="@drawable/savebutton"
+                android:layout_width="90dp"
+                android:text="Save"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/signout"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:onClick="signoutbtnclicked"/>
         </LinearLayout>
 
     </LinearLayout>

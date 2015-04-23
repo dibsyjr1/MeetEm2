@@ -21,8 +21,8 @@
         android:id="@+id/meetem"
         android:title="@string/meetem"
         android:background="@drawable/meetem"
-        android:layout_width="400px"
-        android:layout_height="150px"
+        android:layout_width="250dp"
+        android:layout_height="95dp"
         android:layout_margin="20px"/>
 
 
@@ -31,8 +31,8 @@
         android:id="@+id/map"
         android:title="@string/map"
         android:text="@string/map"
-        android:layout_height="80px"
-        android:layout_width="350px"
+        android:layout_height="50dp"
+        android:layout_width="205dp"
         android:onClick="map_btn_clicked"/>
 
     <ImageButton
@@ -40,8 +40,8 @@
         android:id="@+id/friends"
         android:title="@string/friends"
         android:text="@string/friends"
-        android:layout_height="80px"
-        android:layout_width="350px"
+        android:layout_height="50dp"
+        android:layout_width="205dp"
         android:layout_margin="20px"
         android:onClick="friend_btn_clicked"/>
 
@@ -49,17 +49,18 @@
         android:background="@drawable/groupsbutton"
         android:id="@+id/groups"
         android:title="@string/groups"
-        android:layout_height="80px"
-        android:layout_width="350px"
+        android:layout_height="50dp"
+        android:layout_width="205dp"
         android:onClick="group_btn_clicked"/>
 
     <ImageButton
         android:background="@drawable/optionsbutton"
         android:id="@+id/options"
-        android:layout_height="80px"
-        android:layout_width="350px"
+        android:layout_height="50dp"
+        android:layout_width="205dp"
         android:layout_margin="20px"
-        android:title="Options"/>
+        android:title="Options"
+        android:onClick="options_btn_clicked"/>
 
     </LinearLayout>
 

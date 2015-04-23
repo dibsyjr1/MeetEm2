@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class AddGroupsActivity extends Activity {
 
@@ -43,7 +44,7 @@ public class AddGroupsActivity extends Activity {
         inputDesc = (EditText) findViewById(R.id.Input_Description);
 
         // Create button
-        Button btnCreateGroup = (Button) findViewById(R.id.btnCreateGroup);
+        ImageButton btnCreateGroup = (ImageButton) findViewById(R.id.btnCreateGroup);
 
         // button click event
         btnCreateGroup.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +53,8 @@ public class AddGroupsActivity extends Activity {
             public void onClick(View view) {
                 // creating new group in background thread
                 new CreateNewGroup().execute();
+                Intent i = new Intent(AddGroupsActivity.this, GroupsActivity.class);
+                startActivity(i);
             }
         });
     }

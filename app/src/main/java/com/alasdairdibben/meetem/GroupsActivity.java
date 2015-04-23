@@ -34,14 +34,18 @@ public class GroupsActivity extends ListActivity {
     ArrayList<HashMap<String, String>> groupsList;
 
     // url to get all groups list
-    private static String url_all_groups = "http://meetem.x10host.com/get_groups_list.php";
+    private static String url_all_groups = "http://meetem.x10host.com/get_groups_list_basic.php";
+
+    String User_ID;
+
+    private static final String TAG_UID = "User_ID";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_GROUPS = "groups";
-    private static final String TAG_GID = "gid";
-    private static final String TAG_GROUP_NAME = "groups_name";
-    private static final String TAG_DESCRIPTION = "description";
+    private static final String TAG_GID = "Group_ID";
+    private static final String TAG_GROUP_NAME = "Group_Name";
+    private static final String TAG_DESCRIPTION = "Description";
 
     // products JSONArray
     JSONArray groups = null;
@@ -50,6 +54,12 @@ public class GroupsActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groups);
+
+        // getting group details from intent
+        Intent i = getIntent();
+
+        // getting group id (gid) from intent
+        User_ID = i.getStringExtra(TAG_UID);
 
         // Hashmap for ListView
         groupsList = new ArrayList<HashMap<String, String>>();
@@ -68,14 +78,14 @@ public class GroupsActivity extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // getting values from selected GroupItem
-                String gid = ((TextView) view.findViewById(R.id.gid)).getText()
+                String Group_ID = ((TextView) view.findViewById(R.id.Group_ID)).getText()
                         .toString();
 
                 // Starting new intent
                 Intent in = new Intent(getApplicationContext(),
                         EditGroupsActivity.class);
                 // sending gid to next activity
-                in.putExtra(TAG_GID, gid);
+                in.putExtra(TAG_GID, Group_ID);
 
                 // starting new activity and expecting some response back
                 startActivityForResult(in, 100);
@@ -141,20 +151,20 @@ public class GroupsActivity extends ListActivity {
 
                     // looping through All Groups
                     for (int i = 0; i < groups.length(); i++) {
-                        JSONObject c = groups.getJSONObject(i);
+                        JSONObject groupobjects = groups.getJSONObject(i);
 
                         // Storing each json item in variable
-                        String gid = c.getString(TAG_GID);
-                        String group_name = c.getString(TAG_GROUP_NAME);
-                        String description = c.getString(TAG_DESCRIPTION);
+                        String Group_ID = groupobjects.getString(TAG_GID);
+                        String Group_Name = groupobjects.getString(TAG_GROUP_NAME);
+                        String Description = groupobjects.getString(TAG_DESCRIPTION);
 
                         // creating new HashMap
                         HashMap<String, String> map = new HashMap<String, String>();
 
                         // adding each child node to HashMap key => value
-                        map.put(TAG_GID, gid);
-                        map.put(TAG_GROUP_NAME, group_name);
-                        map.put(TAG_DESCRIPTION, description);
+                        map.put(TAG_GID, Group_ID);
+                        map.put(TAG_GROUP_NAME, Group_Name);
+                        map.put(TAG_DESCRIPTION, Description);
 
                         // adding HashList to ArrayList
                         groupsList.add(map);
@@ -189,9 +199,9 @@ public class GroupsActivity extends ListActivity {
                      * */
                     ListAdapter adapter = new SimpleAdapter(
                             GroupsActivity.this, groupsList,
-                            R.layout.list_friend, new String[] { TAG_GID,
+                            R.layout.list_group, new String[] { TAG_GID,
                             TAG_GROUP_NAME, TAG_DESCRIPTION},
-                            new int[] { R.id.gid, R.id.group_name, R.id.description });
+                            new int[] { R.id.Group_ID, R.id.Group_Name, R.id.Description });
                     // updating listview
                     setListAdapter(adapter);
                 }
@@ -199,5 +209,10 @@ public class GroupsActivity extends ListActivity {
 
         }
 
+    }
+
+    public void create_group_btn_clicked(View v){
+        Intent i = new Intent(GroupsActivity.this, AddGroupsActivity.class);
+        startActivity(i);
     }
 }

@@ -1,56 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:gravity="center|top"
+    android:weightSum="10"
     android:background="@drawable/main_header_selector">
 
-    <!-- Group Name Label -->
-    <ImageView android:layout_width="450px"
-        android:layout_height="wrap_content"
-        android:background="@drawable/groupname"
-        android:layout_marginLeft="20px"
-        android:layout_marginTop="20px"/>
+    <!-- Username Label -->
 
-    <!-- Input Group Name -->
-    <EditText android:id="@+id/Input_Group_Name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:layout_marginBottom="15dip"
-        android:singleLine="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:layout_marginTop="-150px"
+        android:layout_weight="8"
+        android:weightSum="10"
+        android:paddingTop="140px">
 
-    <!-- Description Label -->
-    <ImageView android:layout_width="420px"
-        android:layout_height="wrap_content"
-        android:background="@drawable/description"
-        android:layout_marginLeft="28px"
-        android:layout_marginTop="20px"/>
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="5px"
+            android:background="@drawable/creategrouplabel"
+            android:layout_gravity="center"/>
 
-    <!-- Input Description -->
-    <EditText android:id="@+id/Input_Description"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:layout_marginBottom="15dip"
-        android:singleLine="true"
-        android:inputType="numberDecimal"/>
+        <ImageView
+            android:background="@drawable/groupname"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:layout_width="150dp"
+            android:layout_marginLeft="-10px"
+            android:layout_height="32dp"
+            android:paddingBottom="20px"
+            android:layout_gravity="left"/>
 
+        <!-- Input Username -->
+        <EditText
+            android:id="@+id/Input_Group_Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="15dip"
+            android:singleLine="true"/>
 
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        <ImageView
+            android:background="@drawable/description"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:layout_width="140dp"
+            android:layout_height="32dp"
+            android:paddingBottom="20px"
+            android:layout_gravity="left"/>
 
+        <!-- Input Username -->
+        <EditText
+            android:id="@+id/Input_Description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="15dip"
+            android:singleLine="true"/>
 
 
         <!-- Button Create Group -->
         <ImageButton
             android:id="@+id/btnCreateGroup"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="600px"
-            android:layout_height="120px"
-            android:background="@drawable/creategroup"/>/>
-    </LinearLayout>
+            android:background="@drawable/creategroup"
+            android:layout_width="225dp"
+            android:layout_height="45dp"
+            android:text="Add Friend"/>
 
+    </LinearLayout>
 
 </LinearLayout>

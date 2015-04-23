@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:padding="20px"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="10"
     android:background="@drawable/main_header_selector">
 
-    <!-- Group Name Label -->
-    <ImageView android:layout_width="420px"
-        android:layout_height="wrap_content"
-        android:background="@drawable/groupname"
-        android:paddingLeft="30px"
-        android:paddingRight="10dip"
-        android:paddingTop="30px"
-        android:textSize="17dip"/>
+    <!-- Username Label -->
 
-    <!-- Input Group Name -->
-    <EditText android:id="@+id/Input_Group_Name"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:layout_marginTop="-90px"
+        android:layout_weight="8"
+        android:weightSum="10"
+        android:paddingTop="140px">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="15px"
+            android:background="@drawable/editgroup"
+            android:layout_gravity="center"/>
+
+    <!-- Group Name Label -->
+    <ImageView
+        android:background="@drawable/groupname"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:textSize="17dip"
+        android:layout_width="150dp"
+        android:layout_marginLeft="-10px"
+        android:layout_height="30dp"
+        android:paddingBottom="20px"
+        android:layout_gravity="left"/>
+
+    <!-- Input Username -->
+    <EditText
+        android:id="@+id/Input_Group_Name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
         android:layout_marginBottom="15dip"
         android:singleLine="true"/>
 
-    <!-- Description Label -->
-    <ImageView android:layout_width="420px"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="13px"
-        android:background="@drawable/description"/>
+    <ImageView
+        android:background="@drawable/description"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:textSize="17dip"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:paddingBottom="20px"
+        android:layout_gravity="left"/>
 
-    <!-- Input Description -->
-    <EditText android:id="@+id/Input_Description"
+    <!-- Input Username -->
+    <EditText
+        android:id="@+id/Input_Description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
@@ -46,7 +77,7 @@
             android:background="@drawable/savebutton"
             android:layout_width="fill_parent"
             android:text="Save"
-            android:layout_height="80px"
+            android:layout_height="30dp"
             android:layout_weight="1"/>
 
         <!-- Button Delete Group -->
@@ -55,8 +86,10 @@
             android:background="@drawable/deletebutton"
             android:layout_width="fill_parent"
             android:text="Delete"
-            android:layout_height="80px"
+            android:layout_height="30dp"
             android:layout_weight="1"/>
+    </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

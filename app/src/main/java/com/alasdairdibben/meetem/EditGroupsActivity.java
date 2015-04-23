@@ -14,19 +14,21 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class EditGroupsActivity extends Activity {
 
     EditText txtGroupName;
     EditText txtDesc;
-    Button btnSave;
-    Button btnDelete;
+    ImageButton btnSave;
+    ImageButton btnDelete;
 
-    String gid;
+    String Group_ID;
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -46,24 +48,26 @@ public class EditGroupsActivity extends Activity {
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_GROUP = "group";
-    private static final String TAG_GID = "gid";
-    private static final String TAG_GROUP_NAME = "group_name";
-    private static final String TAG_DESCRIPTION = "description";
+    private static final String TAG_GID = "Group_ID";
+    private static final String TAG_GROUP_NAME = "Group_Name";
+    private static final String TAG_DESCRIPTION = "Description";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         setContentView(R.layout.editgroup);
 
         // save button
-        btnSave = (Button) findViewById(R.id.btnSave);
-        btnDelete = (Button) findViewById(R.id.btnDelete);
+        btnSave = (ImageButton) findViewById(R.id.btnSave);
+        btnDelete = (ImageButton) findViewById(R.id.btnDelete);
 
         // getting group details from intent
         Intent i = getIntent();
 
         // getting group id (gid) from intent
-        gid = i.getStringExtra(TAG_GID);
+        Group_ID = i.getStringExtra(TAG_GID);
 
         // Getting complete group details in background thread
         new GetGroupDetails().execute();
@@ -121,7 +125,7 @@ public class EditGroupsActivity extends Activity {
                     try {
                         // Building Parameters
                         List<NameValuePair> params = new ArrayList<NameValuePair>();
-                        params.add(new BasicNameValuePair("gid", gid));
+                        params.add(new BasicNameValuePair("Group_ID", Group_ID));
 
                         // getting group details by making HTTP request
                         // Note that group details url will use GET request
@@ -194,14 +198,14 @@ public class EditGroupsActivity extends Activity {
         protected String doInBackground(String... args) {
 
             // getting updated data from EditTexts
-            String group_name = txtGroupName.getText().toString();
-            String description = txtDesc.getText().toString();
+            String Group_Name = txtGroupName.getText().toString();
+            String Description = txtDesc.getText().toString();
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
-            params.add(new BasicNameValuePair(TAG_GID, gid));
-            params.add(new BasicNameValuePair(TAG_GROUP_NAME, group_name));
-            params.add(new BasicNameValuePair(TAG_DESCRIPTION, description));
+            params.add(new BasicNameValuePair(TAG_GID, Group_ID));
+            params.add(new BasicNameValuePair(TAG_GROUP_NAME, Group_Name));
+            params.add(new BasicNameValuePair(TAG_DESCRIPTION, Description));
 
             // sending modified data through http request
             // Notice that update group url accepts POST method
@@ -265,14 +269,14 @@ public class EditGroupsActivity extends Activity {
             try {
                 // Building Parameters
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
-                params.add(new BasicNameValuePair("gid", gid));
+                params.add(new BasicNameValuePair("Group_ID", Group_ID));
 
                 // getting group details by making HTTP request
                 JSONObject json = jsonParser.makeHttpRequest(
                         url_delete_group, "POST", params);
 
                 // check your log for json response
-                Log.d("Delete Product", json.toString());
+                Log.d("Delete Group", json.toString());
 
                 // json success tag
                 success = json.getInt(TAG_SUCCESS);

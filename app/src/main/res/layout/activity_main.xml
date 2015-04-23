@@ -21,17 +21,17 @@
             android:id="@+id/meetem"
             android:title="@string/meetem"
             android:background="@drawable/meetem"
-            android:layout_width="600px"
-            android:layout_height="250px"/>
+            android:layout_width="300dp"
+            android:layout_height="120dp"/>
 
         <ImageView
             android:background="@drawable/username"
             android:id="@+id/username"
             android:title="@string/username"
             android:text="@string/username"
-            android:layout_height="50px"
+            android:layout_height="15dp"
             android:layout_weight="1"
-            android:layout_width="400px"
+            android:layout_width="170dp"
             android:layout_gravity="left"/>
 
 
@@ -48,9 +48,9 @@
             android:background="@drawable/password"
             android:id="@+id/password"
             android:title="@string/password"
-            android:layout_height="50px"
+            android:layout_height="15dp"
             android:layout_weight="1"
-            android:layout_width="400px"
+            android:layout_width="170dp"
             android:layout_gravity="left"/>
 
 
@@ -59,21 +59,24 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dip"
             android:layout_marginBottom="15dip"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:password="true"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign In"
-            android:id="@+id/signin"
-            android:onClick="signinbtnclicked"/>
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/signin"
+            android:id="@+id/signin"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create Account"
+            android:layout_margin="10dp"
             android:id="@+id/createaccount"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="create_new_clicked"/>
 
     </LinearLayout>
 
